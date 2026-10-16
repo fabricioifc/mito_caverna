@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jogue e investigue a diferença entre aparência e realidade com três desafios inspirados na alegoria da caverna.">
+  <title>Jogo | O Mito da Caverna</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="index.html" aria-label="O Mito da Caverna, página inicial"><span class="wordmark-mark">◒</span> mito<span>·</span>caverna</a>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+      <a href="alegoria.html">A alegoria</a>
+      <a href="equipe.html">A equipe</a>
+      <a class="active" aria-current="page" href="jogo.html">Jogo</a>
+    </nav>
+    <details class="mobile-menu">
+      <summary aria-label="Menu de navegação" title="Abrir ou fechar o menu"><span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span></summary>
+      <nav class="mobile-nav" aria-label="Navegação móvel">
+        <a href="index.html">Início</a>
+        <a href="alegoria.html">A alegoria</a>
+        <a href="equipe.html">A equipe</a>
+        <a class="active" aria-current="page" href="jogo.html">Jogo</a>
+      </nav>
+    </details>
+  </header>
+
+  <main>
+    <section class="game-hero">
+      <div class="game-hero-copy">
+        <p class="eyebrow">Laboratório da percepção · 3 desafios</p>
+        <h1>O que você vê — e o que existe?</h1>
+        <p>Imagens, palavras e situações podem revelar o mundo ou apenas um jeito de interpretá-lo. Investigue cada cena.</p>
+      </div>
+      <div class="game-hero-art" aria-hidden="true">
+        <span class="art-ring art-ring-outer"></span>
+        <span class="art-ring art-ring-inner"></span>
+        <span class="art-shadow"></span>
+        <span class="art-light"></span>
+        <span class="art-caption">aparência<br>≠<br>realidade</span>
+      </div>
+    </section>
+
+    <section class="game-intro section-wrap" aria-label="Instruções do jogo">
+      <p>Escolha uma resposta em cada cena. Abra uma pista quando precisar; a explicação aparece depois da escolha.</p>
+      <button class="game-reset" type="reset" form="perception-game">Recomeçar</button>
+    </section>
+
+    <form class="game-form section-wrap" id="perception-game">
+      <article class="game-round">
+        <header class="round-heading">
+          <span class="round-index">01</span>
+          <div><p class="round-kind">Imagem</p><h2>O vale cabe nesta fotografia?</h2></div>
+        </header>
+        <div class="round-layout">
+          <figure class="scene-visual photo-scene">
+            <img src="img/hero-paisagem.jpg" alt="Fotografia de uma paisagem montanhosa iluminada pelo sol">
+            <figcaption>Uma paisagem vista por uma tela.</figcaption>
+          </figure>
+          <div class="round-challenge">
+            <p class="scene-prompt">Você está diante de uma fotografia de um vale. O que está realmente na tela?</p>
+            <details class="clue">
+              <summary>Revelar pista</summary>
+              <p>A fotografia tem bordas e pode ser guardada. O lugar fotografado continua muito maior que a imagem.</p>
+            </details>
+            <fieldset class="choice-set">
+              <legend>O que a fotografia mostra?</legend>
+              <input class="choice-input" type="radio" name="round-1" id="round-1-reality" value="reality">
+              <label for="round-1-reality"><span aria-hidden="true">◉</span> O próprio vale</label>
+              <input class="choice-input" type="radio" name="round-1" id="round-1-image" value="representation">
+              <label for="round-1-image"><span aria-hidden="true">▧</span> Uma representação do vale</label>
+              <div class="answer answer-wrong" id="round-1-feedback-reality" role="status"><strong>Quase.</strong><p>O vale existe fora da tela. A fotografia é real como objeto, mas representa o lugar sem ser o próprio lugar.</p></div>
+              <div class="answer answer-right" id="round-1-feedback-image" role="status"><strong>Boa leitura.</strong><p>A fotografia é uma representação: seleciona um ângulo e um instante, enquanto o vale existe para além do enquadramento.</p></div>
+            </fieldset>
+          </div>
+        </div>
+      </article>
+
+      <article class="game-round">
+        <header class="round-heading">
+          <span class="round-index">02</span>
+          <div><p class="round-kind">Frase</p><h2>Uma certeza ou uma perspectiva?</h2></div>
+        </header>
+        <div class="round-layout">
+          <figure class="scene-visual phrase-scene">
+            <span class="phrase-mark" aria-hidden="true">“</span>
+            <blockquote>O mundo é exatamente aquilo que meus olhos mostram.</blockquote>
+            <figcaption>Uma afirmação para examinar, não aceitar de imediato.</figcaption>
+          </figure>
+          <div class="round-challenge">
+            <p class="scene-prompt">A frase descreve toda a realidade ou expressa uma visão limitada de quem observa?</p>
+            <details class="clue">
+              <summary>Revelar pista</summary>
+              <p>O olhar depende de posição, luz e experiência. Não enxergar algo não prova que aquilo não exista.</p>
+            </details>
+            <fieldset class="choice-set">
+              <legend>Como classificar a afirmação?</legend>
+              <input class="choice-input" type="radio" name="round-2" id="round-2-reality" value="reality">
+              <label for="round-2-reality"><span aria-hidden="true">◉</span> Descrição completa da realidade</label>
+              <input class="choice-input" type="radio" name="round-2" id="round-2-view" value="representation">
+              <label for="round-2-view"><span aria-hidden="true">▧</span> Uma perspectiva parcial</label>
+              <div class="answer answer-wrong" id="round-2-feedback-reality" role="status"><strong>Não necessariamente.</strong><p>A frase transforma uma experiência individual em explicação total. O que vemos pode ser verdadeiro, mas não precisa ser tudo o que existe.</p></div>
+              <div class="answer answer-right" id="round-2-feedback-view" role="status"><strong>Isso.</strong><p>A frase é uma perspectiva: nossos sentidos oferecem sinais do mundo, mas toda observação parte de um ponto de vista.</p></div>
+            </fieldset>
+          </div>
+        </div>
+      </article>
+
+      <article class="game-round">
+        <header class="round-heading">
+          <span class="round-index">03</span>
+          <div><p class="round-kind">Situação</p><h2>Quem está do outro lado do espelho?</h2></div>
+        </header>
+        <div class="round-layout">
+          <figure class="scene-visual mirror-scene">
+            <div class="mirror-frame" aria-hidden="true"><div class="mirror-glass"><span>VOCÊ</span></div></div>
+            <figcaption>O reflexo acompanha cada movimento, mas não ocupa o mesmo espaço.</figcaption>
+          </figure>
+          <div class="round-challenge">
+            <p class="scene-prompt">Você levanta a mão e a imagem no espelho faz o mesmo. O reflexo é a pessoa ou uma representação dela?</p>
+            <details class="clue">
+              <summary>Revelar pista</summary>
+              <p>Se você sair do campo do espelho, a imagem desaparece. A pessoa continua ali.</p>
+            </details>
+            <fieldset class="choice-set">
+              <legend>O que você está observando?</legend>
+              <input class="choice-input" type="radio" name="round-3" id="round-3-person" value="reality">
+              <label for="round-3-person"><span aria-hidden="true">◉</span> A própria pessoa</label>
+              <input class="choice-input" type="radio" name="round-3" id="round-3-reflection" value="representation">
+              <label for="round-3-reflection"><span aria-hidden="true">▧</span> O reflexo da pessoa</label>
+              <div class="answer answer-wrong" id="round-3-feedback-person" role="status"><strong>Observe a diferença.</strong><p>A pessoa está diante do espelho. O reflexo é uma imagem produzida pela luz e pela superfície refletora.</p></div>
+              <div class="answer answer-right" id="round-3-feedback-reflection" role="status"><strong>Exatamente.</strong><p>O reflexo representa a pessoa, mas não é ela. Distinguir a imagem daquilo que a origina é o centro deste jogo.</p></div>
+            </fieldset>
+          </div>
+        </div>
+      </article>
+    </form>
+
+    <section class="game-outro">
+      <div class="section-wrap game-outro-inner">
+        <p class="eyebrow light-eyebrow">A pergunta continua</p>
+        <h2>O que mais pode parecer real sem ser a coisa em si?</h2>
+        <a class="text-link light-link" href="alegoria.html">Revisitar a alegoria <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="wordmark footer-wordmark" href="index.html"><span class="wordmark-mark">◒</span> mito<span>·</span>caverna</a>
+    <p>Um convite a questionar o que parece evidente.</p>
+    <a href="equipe.html">Conheça a equipe <span aria-hidden="true">↗</span></a>
+  </footer>
+</body>
+</html>
